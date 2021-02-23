@@ -11,6 +11,11 @@
   font-size: 62.5%;
   font-family: "Nova Square", cursive;
 }
+header, a {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
 h1 {
   font-size: 5.4rem;
   color: #fff;
@@ -19,7 +24,7 @@ h1 {
 p {
   font-size: 3rem;
   color: #fff;
-  margin-bottom: 5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 h2 {
@@ -29,13 +34,13 @@ h2 {
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 80rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .flex-column {
