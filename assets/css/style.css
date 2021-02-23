@@ -10,10 +10,15 @@
   padding: 0;
   font-size: 62.5%;
   font-family: "Nova Square", cursive;
+  outline: none;
+  border: none;
 }
-header, a {
+header,
+a {
   padding-top: 1rem;
-  padding-left: 1rem;
+  padding-left: 0rem;
+  outline: none;
+  border: none;
 }
 
 h1 {
@@ -74,6 +79,7 @@ h2 {
     rgb(102, 125, 255) 100%
   );
   border-radius: 8px;
+  outline: none;
 }
 
 .btn:hover {
