@@ -1,6 +1,5 @@
 body {
   color: #fff;
-
 }
 .choice-container {
   display: flex;
@@ -20,6 +19,19 @@ body {
   box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
   transition: transform 100ms;
   transform: scale(1.03);
+}
+.clockScore {
+  color: yellow;
+  font-size: 35px;
+  float: right;
+  padding: 15px;
+  padding-right: 3rem;
+}
+#countdown {
+  color: white;
+}
+#score {
+  color: white;
 }
 
 .choice-prefix {

@@ -15,29 +15,21 @@
 
 <body>
   <header>
-    <a href="../index.html"><button class="btn">Home</button></a></br>
-    <a href="../highscore/highscore.html"><button class="btn">HighScore</button></a>
+    
+
+    <div>
+      <a href="../index.html"><button class="btn">Home</button></a></br>
+      <a href="../highscore/highscore.html"><button class="btn">HighScore</button></a>
+      <h1 class="clockScore" id="countdown">1:00</h1>
+      <h2 class="clockScore">Timer: </h2>
+      <h1 class="clockScore" id="score">0</h1>
+      <h2 class="clockScore">Score: </h2>
+    </div>
+
   </header>
+
   <div class="container">
     <div id="game" class="justify-center flex-column">
-      <div id="hud">
-        <div class="hud-item">
-          <p id="progressText" class="hud-prefix">
-            Question
-          </p>
-          <div id="progressBar">
-            <div id="progressBarFull"></div>
-          </div>
-        </div>
-        <div class="hud-item">
-          <p class="hud-prefix">
-            Score:
-          </p>
-          <h1 class="hud-main-text" id="score">
-            0
-          </h1>
-        </div>
-      </div>
       <h2 id="question">What is the answer to this question?</h2>
       <div class="choice-container">
         <p class="choice-prefix">A:</p>
