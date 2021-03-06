@@ -28,7 +28,7 @@ let questions = [
     answer: 4,
   },
   {
-    question: "what is the correct file extension for Javascript files?",
+    question: "What is the correct file extension for Javascript files?",
     choice1: ".java",
     choice2: ".js",
     choice3: ".javacript",
