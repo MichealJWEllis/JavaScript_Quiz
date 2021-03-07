@@ -91,8 +91,24 @@ body {
   background: rgb(11, 223, 36);
   width: 0%;
 }
-@media screen and (max-width: 768px) {
-  .choice-container {
-    min-width: 40rem;
-  }
+
+/* Media Queries */
+/* Desktops, large Screens */
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+  /* Styles */
+}
+
+/* Small screens, laptops */
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+
+/* iPads, Tablets */
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+  /* Styles */
+}
+
+/* Mobile devices */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
 }
