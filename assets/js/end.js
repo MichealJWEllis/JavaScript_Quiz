@@ -12,7 +12,7 @@ finalScore.innerText = mostRecentScore;
 username.addEventListener("keyup", () => {
     saveScoreBtn.disabled = !username.value;
 });
-
+// Scripting used to apply user information to page
 function saveHighScore(e) {
     e.preventDefault();
 

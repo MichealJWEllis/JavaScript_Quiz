@@ -10,6 +10,8 @@ let score = 0;
 let timeLeft = 59;
 let questionCounter = 0;
 let availableQuestions = [];
+
+// Question to be randomized
 let questions = [
   {
     question: "What is the HTML tag under which one can write the JavaScript code?",
@@ -52,7 +54,7 @@ let questions = [
     answer: 3,
   }
 ];
-
+// Start game / reset all counters / refresh questions randomly
 function startGame() {
   questionCounter = 0;
   score = 0;
@@ -60,7 +62,7 @@ function startGame() {
   getNewQuestion();
   countdown();
 };
-
+// One minute timer applied to page at load
 function countdown() {
   var timeInterval = setInterval(function () {
 
@@ -75,7 +77,7 @@ function countdown() {
   }, 1000)
 
 }
-
+// Randomize questions
 function getNewQuestion() {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
     localStorage.setItem('mostRecentScore', score)
@@ -120,12 +122,12 @@ choices.forEach(choice => {
     }, 1000)
   })
 })
-
+// Will add to users score for correct answers
 function incrementScore(num) {
   score += num
   scoreText.innerText = score
 }
-
+// Will deduct time from users overall time for incorrect answers
 function decrementTime() {
   timeLeft -= 10
   timer_h1.innerHTML = ':' + timeLeft;

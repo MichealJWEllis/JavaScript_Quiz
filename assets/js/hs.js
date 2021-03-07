@@ -1,3 +1,4 @@
+// Scripting used to apply users highscore to page
 const highScoresList = document.querySelector('#highScoresList')
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
 

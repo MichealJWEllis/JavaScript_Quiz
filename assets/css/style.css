@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
-
+/* Basic page styling */
 :root {
   background-color: rgb(29, 26, 26);
 }
@@ -13,6 +13,7 @@
   outline: none;
   border: none;
 }
+/* Control styling for header */
 header,
 a {
   padding-top: 2rem;
@@ -35,7 +36,7 @@ h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
-
+/* Page styling */
 .container {
   width: 90vw;
   height: 70vh;
