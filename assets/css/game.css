@@ -61,37 +61,6 @@ body {
   );
 }
 
-/* Heads up Display  */
-
-#hud {
-  display: flex;
-  justify-content: space-between;
-}
-
-.hud-prefix {
-  text-align: left;
-  font-size: 2rem;
-}
-
-.hud-main-text {
-  text-align: center;
-}
-
-#progressBar {
-  width: 20rem;
-  height: 3rem;
-  border: 0.2rem solid rgb(11, 223, 36);
-  margin-top: 2rem;
-  border-radius: 50px;
-  overflow: hidden;
-}
-
-#progressBarFull {
-  height: 100%;
-  background: rgb(11, 223, 36);
-  width: 0%;
-}
-
 /* Media Queries */
 /* Desktops, large Screens */
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
@@ -101,14 +70,61 @@ body {
 /* Small screens, laptops */
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   /* Styles */
+  .choice-container {
+    min-width: 50rem;
+  }
 }
 
 /* iPads, Tablets */
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
   /* Styles */
+  .choice-container {
+    min-width: 20rem;
+  }
+  .choice-text {
+    font-size: 20px;
+  }
+  .choice-prefix {
+    font-size: 15px;
+  }
+  .btn {
+    width: 15rem;
+    font-size: 20px;
+  }
+  .clockScore {
+    font-size: 25px;
+    padding: 1px;
+    padding-right: 1rem;
+  }
+  #question {
+    font-size: 25px;
+  }
 }
 
 /* Mobile devices */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
+  .choice-container {
+    min-width: 5rem;
+  }
+  .choice-text {
+    font-size: 20px;
+  }
+  .choice-prefix {
+    font-size: 20px;
+  }
+  .btn {
+    width: 8rem;
+    font-size: 15px;
+  }
+  .clockScore {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding: 2px;
+    padding-right: 1rem;
+  }
+  #question {
+    font-size: 25px;
+  }
 }
