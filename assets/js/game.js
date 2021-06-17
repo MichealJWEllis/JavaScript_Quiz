@@ -1,15 +1,16 @@
 const question = document.querySelector("#question");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 5;
+const MAX_QUES = 5;
 const scoreText = document.querySelector("#score");
 const timer_h1 = document.getElementById('countdown');
-let currentQuestion = {};
-let acceptingAnswers = true;
+let currQuest = {};
+let takingAnswers = true;
 let score = 0;
 let timeLeft = 59;
-let questionCounter = 0;
-let availableQuestions = [];
+let questCount = 0;
+let currQuestion = [];
+
 
 // Question to be randomized
 let questions = [
@@ -54,16 +55,16 @@ let questions = [
     answer: 3,
   }
 ];
-// Start game / reset all counters / refresh questions randomly
-function startGame() {
-  questionCounter = 0;
+
+function getGame() {
+  questCount = 0;
   score = 0;
-  availableQuestions = [...questions];
+  currQuestion = [...questions];
   getNewQuestion();
-  countdown();
+  countDown();
 };
-// One minute timer applied to page at load
-function countdown() {
+
+function countDown() {
   var timeInterval = setInterval(function () {
 
     if (timeLeft > 1) {
@@ -77,60 +78,60 @@ function countdown() {
   }, 1000)
 
 }
-// Randomize questions
+
 function getNewQuestion() {
-  if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+  if (currQuestion.length === 0 || questCount > MAX_QUES) {
     localStorage.setItem('mostRecentScore', score)
     return window.location.assign("../endpage/end.html")
   }
-  questionCounter++
+  questCount++
 
-  const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-  currentQuestion = availableQuestions[questionsIndex]
-  question.innerText = currentQuestion.question
+  const randomQues = Math.floor(Math.random() * currQuestion.length)
+  currQuest = currQuestion[randomQues]
+  question.innerText = currQuest.question
 
   choices.forEach(choice => {
-    const number = choice.dataset['number']
-    choice.innerText = currentQuestion['choice' + number]
+    const num = choice.dataset['number']
+    choice.innerText = currQuest['choice' + num]
   })
 
-  availableQuestions.splice(questionsIndex, 1)
+  currQuestion.splice(randomQues, 1)
 
-  acceptingAnswers = true
+  takingAnswers = true
 };
 
 choices.forEach(choice => {
   choice.addEventListener('click', e => {
-    if (!acceptingAnswers) return
-    acceptingAnswers = false
-    const selectedChoice = e.target
-    const selectedAnswer = selectedChoice.dataset['number']
-    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+    if (!takingAnswers) return
+    takingAnswers = false
+    const selChoice = e.target
+    const selAnswer = selChoice.dataset['number']
+    let classChange = selAnswer == currQuest.answer ? 'correct' : 'incorrect'
 
-    if (classToApply === 'correct') {
-      incrementScore(SCORE_POINTS)
+    if (classChange === 'correct') {
+      plusScore(SCORE_POINTS)
     } else {
-      decrementTime();
+      minusTime();
     }
 
-    selectedChoice.parentElement.classList.add(classToApply)
+    selChoice.parentElement.classList.add(classChange)
 
     setTimeout(() => {
-      selectedChoice.parentElement.classList.remove(classToApply)
+      selChoice.parentElement.classList.remove(classChange)
       getNewQuestion()
 
     }, 1000)
   })
 })
 // Will add to users score for correct answers
-function incrementScore(num) {
+function plusScore(num) {
   score += num
   scoreText.innerText = score
 }
 // Will deduct time from users overall time for incorrect answers
-function decrementTime() {
+function minusTime() {
   timeLeft -= 10
   timer_h1.innerHTML = ':' + timeLeft;
 
 }
-startGame()
+getGame()

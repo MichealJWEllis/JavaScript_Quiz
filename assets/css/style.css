@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 /* Basic page styling */
 :root {
-  background-color: rgb(29, 26, 26);
+  background-color: gold;
 }
 
 * {
@@ -22,13 +22,13 @@ a {
 }
 
 h1 {
-  font-size: 3rem;
-  color: #fff;
+  font-size: 5rem;
+  color: black;
   margin-bottom: 5rem;
 }
 p {
   font-size: 3rem;
-  color: #fff;
+  color: black;
   margin-bottom: 0.5rem;
   text-align: center;
 }
@@ -71,12 +71,8 @@ h2 {
   text-align: center;
   margin-bottom: 1rem;
   text-decoration: none;
-  color: rgb(251, 255, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(9, 54, 255, 0) 0%,
-    rgb(102, 125, 255) 100%
-  );
+  color: black;
+  background-color: rgba(0, 255, 30, 0.837);
   border-radius: 8px;
   outline: none;
 }
@@ -94,19 +90,19 @@ h2 {
 }
 
 #highscore-btn {
-  background: linear-gradient(
-    90deg,
-    rgba(9, 54, 255, 0) 0%,
-    rgb(102, 125, 255) 100%
-  );
+  background-color: (3, 247, 31);
 }
 #highscore-btn:hover {
   box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5);
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+  transition: transform 150ms;
+  transform: scale(1.03);
 }
 .fa-crown {
   font-size: 3rem;
   margin-top: 1rem;
-  color: goldenrod;
+  color: yellow;
 }
 
 /* End Page CSS */
@@ -148,22 +144,12 @@ input::placeholder {
   border: none;
 }
 
-/* Media Queries */
-/* Desktops, large Screens */
-@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
-  /* Styles */
-}
-
-/* Small screens, laptops */
-@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
-  /* Styles */
-}
-
 /* iPads, Tablets */
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
   /* Styles */
   h1 {
     padding-top: 15rem;
+    font-size: 3rem;
   }
   p {
     font-size: 20px;
@@ -175,8 +161,9 @@ input::placeholder {
   /* Styles */
   h1 {
     padding-top: 15rem;
+    font-size: 3rem;
   }
   p {
-    font-size: 15px;
+    font-size: 20px;
   }
 }

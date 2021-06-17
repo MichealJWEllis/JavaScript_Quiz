@@ -1,7 +1,6 @@
-// Scripting used to apply users highscore to page
-const highScoresList = document.querySelector('#highScoresList')
+const hsList = document.querySelector('#highScoresList')
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
 
-highScoresList.innerHTML = highScores.map(score => {
+hsList.innerHTML = highScores.map(score => {
     return `<li class="high-score">${score.name} - ${score.score}</li>`
 }).join('')

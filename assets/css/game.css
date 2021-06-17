@@ -7,11 +7,7 @@ body {
   margin-bottom: 1rem;
   width: 100%;
   border-radius: 8px;
-  background: linear-gradient(
-    90deg,
-    rgba(9, 54, 255, 0) 0%,
-    rgb(102, 125, 255) 100%
-  );
+  background-color: rgba(0, 0, 0, 0.385);
   font-size: 3rem;
   min-width: 75rem;
 }
@@ -22,7 +18,7 @@ body {
   transform: scale(1.03);
 }
 .clockScore {
-  color: yellow;
+  color: black;
   font-size: 35px;
   float: right;
   padding: 15px;
